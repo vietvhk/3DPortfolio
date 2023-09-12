@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const baseUrl = "https://jsonplaceholder.typicode.com/posts";
+const baseUrl = "https://jsonplaceholder.typicode.com/todos/1";
 
 // const addPosts = async (title, body) => {
 //     await fetch(baseUrl, {
@@ -25,22 +25,18 @@ const baseUrl = "https://jsonplaceholder.typicode.com/posts";
 //         });
 // };
 
-const App = () => {
-    const [posts, setPosts] = useState([]);
-    useEffect(() => {
-        fetch(baseUrl+'?_limit=10')
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                setPosts(data);
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
-    }, []);
+const GetPost = () => {
+    // const [posts, setPosts] = useState([]);
+    let items;
+    // useEffect(() => {
+    return fetch(baseUrl)
+        .then(response => response.json())
+        .then(json => console.log(json))
+    // }, []);
 
-    return (
-        data
-        // ... consume here
-     );
+    // return (
+    //     items
+    //     // ... consume here
+    //  );
 };
+export default GetPost;

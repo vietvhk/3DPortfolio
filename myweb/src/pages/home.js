@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import GetPost from "../api/api";
 const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
   { name: 'Marketplace', href: '#' },
   { name: 'Company', href: '#' },
 ]
-console.log(navigation)
+console.log(GetPost())
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
